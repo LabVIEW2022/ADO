@@ -1,0 +1,7 @@
+T1 = int(0)
+T2 = int(0)
+T3 = int(0)
+T4 = int(0)
+T5 = int(0)
+T6 = int(0)
+T7 = int(0)

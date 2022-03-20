@@ -1,0 +1,6 @@
+T1 = int(1)
+T2 = int(1)
+T3 = int(1)
+T4 = int(1)
+T5 = int(1)
+T6 = int(0)

@@ -1,0 +1,81 @@
+ADO Hardware Versions
+###############################
+Reserved I2C Addresses
+0x20 Free
+0x21 OLED Display 2
+0x22 HVC / EIO (A1 Jumped)
+0x23 Internal IO (A0 and A1 Jumped
+0x24 SLT (A2 Jumped)
+0x27 OLED Display
+###############################
+Hardware identifier
+ADO 1 28-012026ff668d
+ADO 2 28-012026df51f5
+ADO 3 28-01202910e506
+ADO 4 28-0120293b0a4f
+ADO 5 28-012027260629
+ADO 6 28-0120270d0c1f
+###############################
+
+ADO Hardware Changes
+
+11/6/19
+Rev 1.3.0.01.00R
+Initial CLS release
+
+3/2/20
+Rev 1.3.0.02.00R
+Added support for 2 wire hopper detect.  Added Violet wire from NO Relay 6 to GPIO 20
+
+6/9/20
+Rev 1.3.0.03.00R
+Changed LCD display to OLED display
+Changed BC reader to Netum Model C750
+
+7/29/20
+Rev 1.3.0.04.00R
+Added I2C at CPC connector
+
+7/29/20
+Rev 1.3.0.05.00R
+Added logic return isolation relay.
+Added zener diodes on R2 (Leak) and R13 (Isolation) to keep leak voltage from keeping the mechanical relay latched
+Replaced R8 from mechanical Relay to SSR. DRA1-CMX60D10
+Re plum of leak detection pneumatics Improvements to leak detection (ADO Rev 1.3.0.00.24R or higher)
+
+8/3/20
+Added pneumatic system solenoid for system leak testing.
+
+8/11/20
+Rev 1.3.0.06.00R
+Added MCP23017 to ADO main unit at address 0x22 (A2).  This is to control relays originally controlled by GPIO.
+MCP23017 is used to address logic level issues.
+Requires ADO SW 1.3.0.00.25 =>
+
+8/12/20
+Rev 1.3.0.07.00R
+Added DS18B20 for internal temp monitoring
+Added hardware validation
+
+11/23/20
+Rev 1.3.0.08.00R (ADO5 Only)
+Added External USB port to support ST_Flash
+
+Note::::  ADO3 is now ADO2.... (Scott Error)
+
+4/12/21
+Rev 1.3.1.00.01R
+Moved 2 / 3 wire hopper detect from GPIO to p.IO input pins 3 and 4.
+blue to input terminal 3 (Green)
+violet to input terminal 4 (Green)
+
+9/27/21
+Rev 2.0.0.00.01R
+Re routed CPC GPIO 11, 12, 13 and 15 to GPIO 17, 18, 23 and 24.
+This is to allow for second I2C channel and encoder feed back.
+Moved PIO I6 (Green Wire) CPC 13 interface to GPIO Pin 1 3.3VDC
+
+
+
+
+
